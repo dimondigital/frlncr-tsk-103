@@ -8,14 +8,13 @@
 
   input {
     border: 0.0625rem solid transparent;
-    border-radius: 0.55rem;
-    padding: 0.55rem 0.95rem !important;
+    border-radius: 0.30rem !important;
     position: relative;
     transition: all .2s ease;
     letter-spacing: .025em;
     font-size: 1rem;
     box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
-    padding: 0.55rem 0.95rem;
+    padding: 0.55rem 0.95rem !important;
 
     &:hover {
       //background-color: mat.get-color-from-palette($accent-palette, 100) !important;
@@ -28,7 +27,7 @@
   .mdc-text-field {
     display: inline-flex;
     align-items: baseline;
-    padding: 0.55rem 0.95rem !important;
+    //padding: 0.55rem 0.95rem !important;
     position: relative;
     box-sizing: border-box;
     will-change: opacity,transform,color;
