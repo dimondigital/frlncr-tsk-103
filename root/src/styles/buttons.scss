@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary-palette: map.get($color-config, 'primary');
+  $accent-palette: map.get($color-config, 'accent');
+
+  .button-link {
+    padding: 10px !important;
+  }
+
+  form > button {
+    background: mat.get-color-from-palette($accent-palette, 500) !important;
+  }
+
+  a .button-link, .button-link, button, mat-button {
+
+    border: 0.0625rem solid transparent;
+    border-radius: 0.55rem;
+    padding: 0.55rem 0.95rem;
+    position: relative;
+    transition: all .2s ease;
+    letter-spacing: .025em;
+    font-size: 1rem;
+    box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+
+    &:hover {
+      cursor: pointer !important;
+      color: #31344b;
+      background-color: #e6e7ee;
+      border-color: #e6e7ee;
+      box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    }
+  }
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+}
